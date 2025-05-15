@@ -49,7 +49,10 @@ form {
   margin: auto;
 }
 
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   padding: 10px;
   font-size: 1rem;
 }
@@ -64,3 +67,4 @@ input, textarea, select, button {
 .logo {
   height: 80px;
 }
+
