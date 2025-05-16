@@ -1,3 +1,8 @@
+:root {
+  --main-red-color: #b30000;
+  --main-white: #ececf1;
+}
+
 body {
   font-family: sans-serif;
   background-color: #fffaf5;
@@ -7,11 +12,11 @@ body {
 }
 
 body.pagina-pedidos {
-  background-color: #ececf1;
+  background-color: var(--main-white);
 }
 
 header {
-  background-color: #b30000;
+  background-color: var(--main-red-color);
   color: white;
   padding: 20px;
   text-align: center;
@@ -26,16 +31,17 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #b30000;
+  color: var(--main-red-color);
   font-weight: bold;
 }
 
 main {
   padding: 20px;
+  height: 100vh;
 }
 
 footer {
-  background-color: #b30000;
+  background-color: var(--main-red-color);
   color: white;
   text-align: center;
   padding: 15px;
@@ -57,6 +63,15 @@ button {
   font-size: 1rem;
 }
 
+#quant_entrada,
+#quant_prato,
+#quant_bebida {
+  height: 7px;
+  margin-top: 12px;
+  width: 60px;
+  border-radius: 6px;
+}
+
 .banner {
   width: 100%;
   max-height: 300px;
@@ -68,6 +83,25 @@ button {
   height: 80px;
 }
 
+.campos-formulario-pedido {
+  display: flex;
+  flex-direction: column;
+}
+
+.enviar-pedido-btn {
+  border: var(--main-red-color);
+  color: var(--main-red-color);
+  background-color: transparent;
+  border: 1px solid var(--main-red-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.enviar-pedido-btn:hover {
+  background-color: var(--main-red-color);
+  color: var(--main-white);
+  font-weight: 500;
+}
 
 /* carosel */
 .carousel {
@@ -171,8 +205,6 @@ button {
   .carousel { max-width: 100%; }
 }
 
-
-
 #whatsapp-float {
   position: fixed;
   bottom: 24px;
@@ -238,4 +270,3 @@ button {
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px #000000;
 }
-
