@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <title>Pedido - Sushi Palace</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="pagina-pedidos">
+  <body>
     <header>
       <h1>Faça seu Pedido</h1>
     </header>
@@ -18,30 +18,31 @@
     </nav>
     <main>
       <form>
-        <fieldset>
+        <fieldset class="campos-formulario-pedido">
           <legend>Entradas</legend>
-          <label for="entrada">Escolha sua entrada:</label>
           <select id="prato" name="prato" required>
-            <option value="" disabled selected>-- Escolha uma opção --</option>
+            <option value="" disabled selected>Escolha sua entrada</option>
             <option value="sunomono">Sunomono</option>
             <option value="edamame">Edamame</option>
             <option value="missoshiru">Missoshiru</option>
           </select>
-          <label for="quant_entrada">Quantidade:</label>
-          <input
-            type="number"
-            id="quant_entrada"
-            name="quant_entrada"
-            min="1"
-            max="10"
-          />
+          <label>
+            <span>Quantidade:</span>
+            <input
+              type="number"
+              id="quant_entrada"
+              name="quant_entrada"
+              required
+              min="1"
+              max="200"
+            />
+          </label>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="campos-formulario-pedido">
           <legend>Pratos Principais</legend>
-          <label for="prato">Escolha seu prato:</label>
-          <select id="prato" name="prato">
-            <option value="" disabled selected>-- Escolha uma opção --</option>
+          <select required id="prato" name="prato">
+            <option value="" disabled selected>Escolha seu prato</option>
             <option value="sashimi">Sashimi</option>
             <option value="hotroll">Hot Roll</option>
             <option value="hossomaki">Hossomaki</option>
@@ -49,37 +50,42 @@
             <option value="nigiri">Nigiri</option>
             <option value="temaki">Temaki</option>
           </select>
-          <label for="quant_prato">Quantidade:</label>
-          <input
-            type="number"
-            id="quant_prato"
-            name="quant_prato"
-            min="1"
-            max="10"
-          />
+          <label>
+            <span>Quantidade:</span>
+            <input
+              type="number"
+              id="quant_prato"
+              name="quant_prato"
+              required
+              min="1"
+              max="200"
+            />
+          </label>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="campos-formulario-pedido">
           <legend>Bebidas</legend>
-          <label for="bebida">Escolha sua bebida:</label>
-          <select id="bebida" name="bebida">
-            <option value="" disabled selected>-- Escolha uma opção --</option>
+          <select required id="bebida" name="bebida">
+            <option value="" disabled selected>Escolha sua bebida</option>
             <option value="sake">Saquê</option>
             <option value="cha-verde">Chá Verde</option>
             <option value="refrigerante">Refrigerante</option>
             <option value="Vitamina-de-Acerola">Vitamina de Acerola</option>
           </select>
-          <label for="quant_bebida">Quantidade:</label>
-          <input
-            type="number"
-            id="quant_bebida"
-            name="quant_bebida"
-            min="1"
-            max="10"
-          />
+          <label>
+            <span>Quantidade:</span>
+            <input
+              type="number"
+              id="quant_bebida"
+              name="quant_bebida"
+              required
+              min="1"
+              max="200"
+            />
+          </label>
         </fieldset>
 
-        <button type="submit">Enviar Pedido</button>
+        <button class="enviar-pedido-btn" type="submit">Enviar Pedido</button>
       </form>
     </main>
     <footer>
@@ -87,4 +93,3 @@
     </footer>
   </body>
 </html>
-
